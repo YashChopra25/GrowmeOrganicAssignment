@@ -11,6 +11,8 @@ import {
 } from "react-router-dom";
 import GetData from './Components/GetData';
 
+import List from './Components/List';
+
 type UserType = {
   name: string;
   email: string;
@@ -60,6 +62,10 @@ const navigate=useNavigate()
     }  else if (!user.phone.trim()) {
       setInfophone(false);
       seterrormessage("Enter Phone")
+      return false;
+    } else if (!validator.isNumeric(user.phone.trim()) ){
+      setInfophone(false);
+      seterrormessage("Enter valid Phone")
       return false;
     }
    
