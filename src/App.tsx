@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import GetData from './Components/GetData';
 
-import List from './Components/List';
+
 
 type UserType = {
   name: string;
